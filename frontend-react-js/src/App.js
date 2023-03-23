@@ -16,6 +16,7 @@ import {
 } from "react-router-dom";
 
 import { Amplify } from 'aws-amplify';
+import NotificationsFeedPage from './pages/NotificationsFeedPage';
 
 Amplify.configure({
   "AWS_PROJECT_REGION": process.env.REACT_APP_AWS_PROJECT_REGION,
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeFeedPage />
+  },
+  {
+    path: "/notifications",
+    element: <NotificationsFeedPage />
   },
   {
     path: "/@:handle",
